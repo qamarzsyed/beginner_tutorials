@@ -1,0 +1,8 @@
+/home/qamar/ros2_ws/build/turtlesim/rosidl_adapter/turtlesim:action/RotateAbsolute.idl
+/home/qamar/ros2_ws/build/turtlesim/rosidl_adapter/turtlesim:msg/Color.idl
+/home/qamar/ros2_ws/build/turtlesim/rosidl_adapter/turtlesim:msg/Pose.idl
+/home/qamar/ros2_ws/build/turtlesim/rosidl_adapter/turtlesim:srv/Kill.idl
+/home/qamar/ros2_ws/build/turtlesim/rosidl_adapter/turtlesim:srv/SetPen.idl
+/home/qamar/ros2_ws/build/turtlesim/rosidl_adapter/turtlesim:srv/Spawn.idl
+/home/qamar/ros2_ws/build/turtlesim/rosidl_adapter/turtlesim:srv/TeleportAbsolute.idl
+/home/qamar/ros2_ws/build/turtlesim/rosidl_adapter/turtlesim:srv/TeleportRelative.idl

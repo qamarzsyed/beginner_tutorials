@@ -1,0 +1,69 @@
+[0.007s] Invoking command in '/home/qamar/ros2_ws/build/cpp_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/qamar/ros2_ws/src/cpp_pubsub -DCMAKE_INSTALL_PREFIX=/home/qamar/ros2_ws/install/cpp_pubsub
+[0.037s] -- The C compiler identification is GNU 11.3.0
+[0.073s] -- The CXX compiler identification is GNU 11.3.0
+[0.077s] -- Detecting C compiler ABI info
+[0.133s] -- Detecting C compiler ABI info - done
+[0.138s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.139s] -- Detecting C compile features
+[0.139s] -- Detecting C compile features - done
+[0.142s] -- Detecting CXX compiler ABI info
+[0.205s] -- Detecting CXX compiler ABI info - done
+[0.210s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.210s] -- Detecting CXX compile features
+[0.210s] -- Detecting CXX compile features - done
+[0.211s] -- Found ament_cmake: 1.3.2 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.305s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.6") found components: Interpreter 
+[0.354s] -- Found rclcpp: 16.0.1 (/opt/ros/humble/share/rclcpp/cmake)
+[0.382s] -- Found rosidl_generator_c: 3.1.3 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.384s] -- Found rosidl_adapter: 3.1.3 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.389s] -- Found rosidl_generator_cpp: 3.1.3 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.398s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.410s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.452s] -- Found rmw_implementation_cmake: 6.1.0 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.454s] -- Found rmw_fastrtps_cpp: 6.2.1 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.508s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.527s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.559s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.669s] -- Found ament_lint_auto: 0.12.4 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.716s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.717s] -- Configured cppcheck include dirs: 
+[0.717s] -- Configured cppcheck exclude dirs and/or files: 
+[0.717s] -- Added test 'lint_cmake' to check CMake code style
+[0.717s] -- Added test 'uncrustify' to check C / C++ code style
+[0.718s] -- Configured uncrustify additional arguments: 
+[0.718s] -- Added test 'xmllint' to check XML markup files
+[0.718s] -- Configuring done
+[0.725s] -- Generating done
+[0.726s] -- Build files have been written to: /home/qamar/ros2_ws/build/cpp_pubsub
+[0.733s] Invoked command in '/home/qamar/ros2_ws/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/qamar/ros2_ws/src/cpp_pubsub -DCMAKE_INSTALL_PREFIX=/home/qamar/ros2_ws/install/cpp_pubsub
+[0.734s] Invoking command in '/home/qamar/ros2_ws/build/cpp_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/qamar/ros2_ws/build/cpp_pubsub -- -j8 -l8
+[0.762s] [ 50%] [32mBuilding CXX object CMakeFiles/listener.dir/src/subscriber_member_function.cpp.o[0m
+[0.762s] [ 50%] [32mBuilding CXX object CMakeFiles/talker.dir/src/publisher_member_function.cpp.o[0m
+[3.489s] [ 75%] [32m[1mLinking CXX executable talker[0m
+[3.602s] [ 75%] Built target talker
+[5.722s] [100%] [32m[1mLinking CXX executable listener[0m
+[5.946s] [100%] Built target listener
+[5.955s] Invoked command in '/home/qamar/ros2_ws/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/qamar/ros2_ws/build/cpp_pubsub -- -j8 -l8
+[5.977s] Invoking command in '/home/qamar/ros2_ws/build/cpp_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/qamar/ros2_ws/build/cpp_pubsub
+[5.983s] -- Install configuration: ""
+[5.983s] -- Installing: /home/qamar/ros2_ws/install/cpp_pubsub/lib/cpp_pubsub/talker
+[5.985s] -- Set runtime path of "/home/qamar/ros2_ws/install/cpp_pubsub/lib/cpp_pubsub/talker" to ""
+[5.985s] -- Up-to-date: /home/qamar/ros2_ws/install/cpp_pubsub/lib/cpp_pubsub/talker
+[5.985s] -- Installing: /home/qamar/ros2_ws/install/cpp_pubsub/lib/cpp_pubsub/listener
+[5.988s] -- Set runtime path of "/home/qamar/ros2_ws/install/cpp_pubsub/lib/cpp_pubsub/listener" to ""
+[5.988s] -- Installing: /home/qamar/ros2_ws/install/cpp_pubsub/share/ament_index/resource_index/package_run_dependencies/cpp_pubsub
+[5.988s] -- Installing: /home/qamar/ros2_ws/install/cpp_pubsub/share/ament_index/resource_index/parent_prefix_path/cpp_pubsub
+[5.988s] -- Installing: /home/qamar/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.sh
+[5.988s] -- Installing: /home/qamar/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.dsv
+[5.988s] -- Installing: /home/qamar/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/environment/path.sh
+[5.989s] -- Installing: /home/qamar/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/environment/path.dsv
+[5.989s] -- Installing: /home/qamar/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/local_setup.bash
+[5.989s] -- Installing: /home/qamar/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/local_setup.sh
+[5.989s] -- Installing: /home/qamar/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/local_setup.zsh
+[5.989s] -- Installing: /home/qamar/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/local_setup.dsv
+[5.989s] -- Installing: /home/qamar/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/package.dsv
+[5.989s] -- Installing: /home/qamar/ros2_ws/install/cpp_pubsub/share/ament_index/resource_index/packages/cpp_pubsub
+[5.989s] -- Installing: /home/qamar/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig.cmake
+[5.989s] -- Installing: /home/qamar/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig-version.cmake
+[5.989s] -- Installing: /home/qamar/ros2_ws/install/cpp_pubsub/share/cpp_pubsub/package.xml
+[5.991s] Invoked command in '/home/qamar/ros2_ws/build/cpp_pubsub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/qamar/ros2_ws/build/cpp_pubsub
