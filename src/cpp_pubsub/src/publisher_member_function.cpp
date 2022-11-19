@@ -12,6 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+/**
+ * @file publisher_member_function.cpp
+ * @author Qamar Syed (qsyed@umd.edu)
+ * @brief 
+ * @version 0.1
+ * @date 2022-11-18
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
 #include <chrono>
 #include <functional>
 #include <memory>
@@ -23,19 +34,26 @@
 
 using namespace std::chrono_literals;
 
-/* This example creates a subclass of Node and uses std::bind() to register a
- * member function as a callback from the timer. */
 
-void custom_function(const std::shared_ptr<beginner_tutorials::srv::CustomService::Request> request,     // CHANGE
-          std::shared_ptr<beginner_tutorials::srv::CustomService::Response>       response)  // CHANGE
-{
-  response = "default response";                                    // CHANGE
-  RCLCPP_INFO(rclcpp::get_logger("rclcpp"), request);                                         // CHANGE
+/**
+ * @brief service that takes in response and outputs default response
+ * 
+ * @param request takes in from client
+ * @param response output to client
+ */
+void custom_function(const std::shared_ptr<beginner_tutorials::srv::CustomService::Request> request,    
+          std::shared_ptr<beginner_tutorials::srv::CustomService::Response>       response) {
+  response = "default response";                                   
+  RCLCPP_INFO(rclcpp::get_logger("rclcpp"), request);                                       
   RCLCPP_INFO(rclcpp::get_logger("rclcpp"), response);
 }
 
 class MinimalPublisher : public rclcpp::Node {
  public:
+    /**
+      * @brief Construct a new Minimal Publisher object
+      * 
+      */
     MinimalPublisher()
     : Node("minimal_publisher"), count_(0) {
       publisher_ = this->create_publisher<std_msgs::msg::String>("topic", 10);
@@ -48,6 +66,10 @@ class MinimalPublisher : public rclcpp::Node {
     }
 
  private:
+    /**
+     * @brief publishes out the message and a bunch of logging messages from each stream type
+     * 
+     */
     void timer_callback() {
       auto message = std_msgs::msg::String();
       message.data = "Custom message number "
