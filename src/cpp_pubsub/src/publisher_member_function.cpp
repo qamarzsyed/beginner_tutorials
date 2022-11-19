@@ -17,6 +17,7 @@
 #include <memory>
 #include <string>
 
+#include "beginner_tutorials/srv/string_change.hpp"
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 
@@ -25,6 +26,14 @@ using namespace std::chrono_literals;
 /* This example creates a subclass of Node and uses std::bind() to register a
  * member function as a callback from the timer. */
 
+void custom_function(const std::shared_ptr<beginner_tutorials::srv::CustomService::Request> request,     // CHANGE
+          std::shared_ptr<beginner_tutorials::srv::CustomService::Response>       response)  // CHANGE
+{
+  response = "default response";                                    // CHANGE
+  RCLCPP_INFO(rclcpp::get_logger("rclcpp"), request);                                         // CHANGE
+  RCLCPP_INFO(rclcpp::get_logger("rclcpp"), response);
+}
+
 class MinimalPublisher : public rclcpp::Node {
  public:
     MinimalPublisher()
@@ -32,6 +41,10 @@ class MinimalPublisher : public rclcpp::Node {
       publisher_ = this->create_publisher<std_msgs::msg::String>("topic", 10);
       timer_ = this->create_wall_timer(
         500ms, std::bind(&MinimalPublisher::timer_callback, this));
+    
+  
+    custom_serv_ = this->create_service<beginner_tutorials::srv::CustomService>(
+      "custom_service", &custom_function);
     }
 
  private:
@@ -40,6 +53,11 @@ class MinimalPublisher : public rclcpp::Node {
       message.data = "Custom message number "
         + std::to_string(count_++) +" by Qamar Syed";
       RCLCPP_INFO(this->get_logger(), "Publishing: '%s'", message.data.c_str());
+      RCLCPP_ERROR_STREAM(this->get_logger(),"Error: Sample logging" << std::endl);
+      RCLCPP_INFO_STREAM(this->get_logger(),"Info" << std::endl);
+      RCLCPP_WARN_STREAM(this->get_logger(),"Warning" << std::endl);
+      RCLCPP_FATAL_STREAM(this->get_logger(),"Fatal" << std::endl);
+      RCLCPP_DEBUG_STREAM(this->get_logger(),"Debug" << std::endl);
       publisher_->publish(message);
     }
     rclcpp::TimerBase::SharedPtr timer_;
