@@ -1,0 +1,6 @@
+[0.007s] Invoking command in '/home/qamar/ros2_ws/beginner_tutorials/build/my_package': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/qamar/ros2_ws/beginner_tutorials/build/my_package -- -j8 -l8
+[0.010s] [0mCMake Error: The current CMakeCache.txt directory /home/qamar/ros2_ws/beginner_tutorials/build/my_package/CMakeCache.txt is different than the directory /home/qamar/ros2_ws/build/my_package where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[0.015s] [0mCMake Error: The source directory "/home/qamar/ros2_ws/src/my_package" does not exist.
+[0.015s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.016s] gmake: *** [Makefile:267: cmake_check_build_system] Error 1
+[0.017s] Invoked command in '/home/qamar/ros2_ws/beginner_tutorials/build/my_package' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/qamar/ros2_ws/beginner_tutorials/build/my_package -- -j8 -l8

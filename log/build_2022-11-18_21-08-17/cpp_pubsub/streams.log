@@ -1,0 +1,6 @@
+[0.008s] Invoking command in '/home/qamar/ros2_ws/beginner_tutorials/build/cpp_pubsub': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/qamar/ros2_ws/beginner_tutorials/build/cpp_pubsub -- -j8 -l8
+[0.014s] [0mCMake Error: The current CMakeCache.txt directory /home/qamar/ros2_ws/beginner_tutorials/build/cpp_pubsub/CMakeCache.txt is different than the directory /home/qamar/ros2_ws/build/cpp_pubsub where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[0.021s] [0mCMake Error: The source directory "/home/qamar/ros2_ws/src/cpp_pubsub" does not exist.
+[0.021s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.022s] gmake: *** [Makefile:308: cmake_check_build_system] Error 1
+[0.023s] Invoked command in '/home/qamar/ros2_ws/beginner_tutorials/build/cpp_pubsub' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/qamar/ros2_ws/beginner_tutorials/build/cpp_pubsub -- -j8 -l8
