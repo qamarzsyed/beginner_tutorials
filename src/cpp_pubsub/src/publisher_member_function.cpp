@@ -41,10 +41,13 @@ using namespace std::chrono_literals;
  * @param request takes in from client
  * @param response output to client
  */
-void custom_function(const std::shared_ptr<beginner_tutorials::srv::CustomService::Request> request,    
-          std::shared_ptr<beginner_tutorials::srv::CustomService::Response>       response) {
-  response = "default response";                                   
-  RCLCPP_INFO(rclcpp::get_logger("rclcpp"), request);                                       
+void custom_function(
+          const std::shared_ptr
+          <beginner_tutorials::srv::CustomService::Request> request,
+          std::shared_ptr
+          <beginner_tutorials::srv::CustomService::Response> response) {
+  response = "default response";
+  RCLCPP_INFO(rclcpp::get_logger("rclcpp"), request);
   RCLCPP_INFO(rclcpp::get_logger("rclcpp"), response);
 }
 
@@ -59,8 +62,8 @@ class MinimalPublisher : public rclcpp::Node {
       publisher_ = this->create_publisher<std_msgs::msg::String>("topic", 10);
       timer_ = this->create_wall_timer(
         500ms, std::bind(&MinimalPublisher::timer_callback, this));
-    
-  
+
+
     custom_serv_ = this->create_service<beginner_tutorials::srv::CustomService>(
       "custom_service", &custom_function);
     }
@@ -75,17 +78,19 @@ class MinimalPublisher : public rclcpp::Node {
       message.data = "Custom message number "
         + std::to_string(count_++) +" by Qamar Syed";
       RCLCPP_INFO(this->get_logger(), "Publishing: '%s'", message.data.c_str());
-      RCLCPP_ERROR_STREAM(this->get_logger(),"Error: Sample logging" << std::endl);
-      RCLCPP_INFO_STREAM(this->get_logger(),"Info" << std::endl);
-      RCLCPP_WARN_STREAM(this->get_logger(),"Warning" << std::endl);
-      RCLCPP_FATAL_STREAM(this->get_logger(),"Fatal" << std::endl);
-      RCLCPP_DEBUG_STREAM(this->get_logger(),"Debug" << std::endl);
+      RCLCPP_ERROR_STREAM(this->get_logger(),
+        "Error: Sample logging" << std::endl);
+      RCLCPP_INFO_STREAM(this->get_logger(), "Info" << std::endl);
+      RCLCPP_WARN_STREAM(this->get_logger(), "Warning" << std::endl);
+      RCLCPP_FATAL_STREAM(this->get_logger(), "Fatal" << std::endl);
+      RCLCPP_DEBUG_STREAM(this->get_logger(), "Debug" << std::endl);
       publisher_->publish(message);
     }
     rclcpp::TimerBase::SharedPtr timer_;
     rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
     size_t count_;
 };
+
 
 int main(int argc, char * argv[]) {
   rclcpp::init(argc, argv);
