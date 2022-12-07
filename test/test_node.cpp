@@ -52,6 +52,26 @@ TEST_ONE(PubTest(test_services_client, RMW_IMPLEMENTATION), test_add_noreqid) {
   EXPECT_EQ(3, result.get()->sum);
 }
 
+TEST_F(PubTest(test_services_client, RMW_IMPLEMENTATION), test_add_noreqid) {
+  auto node = rclcpp::Node::make_shared("test_services_client_no_reqid");
+
+  auto client = node->create_client<test_rclcpp_simple::srv::AddTwoInts>("add_two_ints_noreqid");
+  auto request = std::make_shared<test_rclcpp_simple::srv::AddTwoInts::Request>();
+  request->a = 1;
+  request->b = 2;
+
+  if (!client->wait_for_service(20s)) {
+    ASSERT_TRUE(false) << "service not available after waiting";
+  }
+
+  auto result = client->async_send_request(request);
+
+  auto ret = rclcpp::spin_until_future_complete(node, result, 5s);  // Wait for the result.
+  ASSERT_EQ(ret, rclcpp::FutureReturnCode::SUCCESS);
+
+  EXPECT_EQ(3, result.get()->sum);
+}
+
 
 
 int main(int argc, char **argv) {
