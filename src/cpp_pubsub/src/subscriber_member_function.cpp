@@ -12,6 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+
+/**
+ * @file subscriber_member_function.cpp
+ * @author Qamar Syed qsyed@umd.edu
+ * @brief 
+ * @version 0.1
+ * @date 2022-11-18
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 #include <functional>
 #include <memory>
 
@@ -20,8 +31,13 @@
 
 using std::placeholders::_1;
 
+
 class MinimalSubscriber : public rclcpp::Node {
  public:
+ /**
+  * @brief Construct a new Minimal Subscriber object
+  * 
+  */
   MinimalSubscriber()
   : Node("minimal_subscriber") {
     subscription_ = this->create_subscription<std_msgs::msg::String>(
@@ -29,6 +45,11 @@ class MinimalSubscriber : public rclcpp::Node {
   }
 
  private:
+ /**
+  * @brief outputs data heard from publisher
+  * 
+  * @param msg data from publisher node
+  */
   void topic_callback(const std_msgs::msg::String & msg) const {
     RCLCPP_INFO(this->get_logger(), "I heard: '%s'", msg.data.c_str());
   }
